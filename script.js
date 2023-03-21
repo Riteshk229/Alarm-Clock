@@ -32,17 +32,19 @@ function zeroPad(num) {
 function crtime(){
 
     var now = new Date();
-    var hours;
+    var hours = (12 -(now.getHours()));
     var minutes = now.getMinutes();
     var sec = now.getSeconds();
 
     var ampm = (now.getHours()) < 12 ? "AM" : "PM";
     
-    if(now.getHours()  <= 12 ){
-        hours = now.getHours();
+    if(hours < 0){
+        hours = hours*-1;
     }
-    else {
-        hours = now.getHours() - 12;
+    else if (hours == 0){
+        hours = 12;
+    } else {
+    hours = hours;
     }
 
     h2.innerText = zeroPad(hours) + ":" +  zeroPad(minutes) + ":" + zeroPad(sec) + " " + ampm;
@@ -57,13 +59,6 @@ function crtime(){
 
 //Current Time ticker
 var currentTime = setInterval(crtime,1000);
-
-
-
-//To set alarm
-function setAlarm(){
-       
-}
 
 
 //New Alarm 
