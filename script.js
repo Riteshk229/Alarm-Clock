@@ -58,14 +58,6 @@ function crtime(){
 //Current Time ticker
 var currentTime = setInterval(crtime,1000);
 
-
-
-//To set alarm
-function setAlarm(){
-       
-}
-
-
 //New Alarm 
 addAlarm.addEventListener('submit', e =>{
     //Stops the page from Reloading
