@@ -1,0 +1,148 @@
+:root{
+    --main-bg-color: rgba(9, 250, 178, 0.808);
+    --main-border-color: rgb(3, 24, 94);
+    --btn-bg-color:#466a99;
+    --btn-bg-hover: #204b74;
+    --btn-border-color: #5d759d;
+    --font-color: black;
+    --font-family: cursive;
+}
+
+/* removing default margins and padding */
+html{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    border-radius: 20px;
+    padding: 40px;
+    width: 60%;
+    height: 400px;
+    margin: 0 auto;
+}
+
+main{
+    height: auto;
+    min-height: 200px;
+    width: 500px;
+    border: 10px solid var(--main-border-color);
+    background-color: var(--main-bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+/* To style Current Time Section */
+#clock-container{
+    height: auto;
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#current-time{
+    height: 10%;
+    width: 100%;
+}
+
+#current-time h2{
+    color:var(--font-color);
+    font-family:var(--font-family);
+    text-align:center;
+}
+
+
+
+/* To style Set Alarm  Section */
+#alarm-container{
+    min-height: 150px;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+
+}
+
+.alarm-heading{
+    color: var(--font-color);
+    margin-bottom: 20px;
+    padding-top: 50px;
+    font-family: var(--font-family);
+}
+
+.set-alarm{
+    margin-top: -20px;
+    height: 40px;
+    padding-top: 0px;
+
+}
+
+.set-alarm button{
+    background-color:var(--btn-bg-color);
+    border-color:var(--btn-border-color);
+    color: var(--font-color);
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight:500;
+    margin-top: 2%;
+    font-family:var(--font-family);
+}
+
+.set-alarm button:hover{
+    background-color:var(--btn-bg-hover);
+}
+
+
+/* To style Alarm List Section */
+#alarm-list{
+    height: auto;
+    width: 100%;
+    min-height: 200px;
+}
+
+
+#alarm-list > div{
+    color: var(--font-color);
+}
+
+#alarm-list > h3{
+    text-align: center;
+    margin-top: -30px;
+}
+
+
+.time-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--font-color);
+    width: 90%;
+}
+
+
+.time-list span{
+    font-family: var(--font-family);
+    width: 160px;
+    display: inline-block;
+    margin: 1%;
+    
+}
+
+
+.time-list button{
+    background-color: var(--btn-bg-color);
+    border-color:var(--btn-border-color);
+    border-radius: 3px;
+    border-width: 0px;
+    height: 22px;
+    font-family: var(--font-family);
+    color: var(--font-color);
+}
+
+.time-list button:hover{
+    background-color:var(--btn-bg-hover);
+}
