@@ -32,7 +32,7 @@ function zeroPad(num) {
 function crtime(){
 
     var now = new Date();
-    var hours;
+    var hours ;
     var minutes = now.getMinutes();
     var sec = now.getSeconds();
 
@@ -58,6 +58,7 @@ function crtime(){
 //Current Time ticker
 var currentTime = setInterval(crtime,1000);
 
+
 //New Alarm 
 addAlarm.addEventListener('submit', e =>{
     //Stops the page from Reloading
@@ -81,9 +82,7 @@ addAlarm.addEventListener('submit', e =>{
         } else{
             alert(`Alarm for ${newAlarm} already set.`);
         }
-    } else{
-        alert("Invalid Time Entered")
-    }     
+    }    
 });
 
 //Function to display the list of alarm
